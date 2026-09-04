@@ -182,7 +182,20 @@ def delete_post(id):
 
 
 # ----------------- 공공 데이터 연동 설정 (부산테마여행) -----------------
-PUBLIC_API_KEY = "pan6AspZlA1SWy7xYGiinbDgjfOfKzYwGAlLyGz8DovCRatctaDGDYp6RrwZWNSm4F62rqKWayTKEAndfO9KFQ=="
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+PUBLIC_API_KEY = os.environ.get("PUBLIC_API_KEY")
+
+# 키 값 자체는 절대 출력하지 않고 안전하게 확인
+if PUBLIC_API_KEY:
+    print("키 로드됨 — 앞 4자리:", PUBLIC_API_KEY[:4] + "****")
+    # 이후 불러온 key를 활용해 공공데이터 API 요청 로직 작성
+else:
+    print("키 없음 — 더미 실습 진행 또는 설정을 확인하세요.")
+
 PUBLIC_API_URL = "http://apis.data.go.kr/6260000/RecommendedService/getRecommendedKr"
 
 @app.route('/api/public/posts', methods=['GET'])
