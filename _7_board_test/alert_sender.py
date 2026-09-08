@@ -1,6 +1,6 @@
 import requests
 
-N8N_URL = "http://localhost:5678/webhook-test/a750d7c8-225f-4e85-acb5-a3adf9dcae56"
+N8N_URL = "http://localhost:5678/webhook/a750d7c8-225f-4e85-acb5-a3adf9dcae56"
 STUDENT = "심희현"
 
 data = {
