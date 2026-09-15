@@ -7,7 +7,8 @@ from .post_controller import post_bp
 from .public_controller import public_bp
 from .security_controller import security_bp
 
-all_blueprints = (page_bp, auth_bp, post_bp, security_bp, public_bp, gold_bp, admin_bp)
+all_blueprints = (page_bp, auth_bp, post_bp, security_bp, public_bp,
+                  admin_bp, gold_bp)
 
 __all__ = ['all_blueprints', 'page_bp', 'auth_bp', 'post_bp',
-           'security_bp', 'public_bp', 'gold_bp', 'admin_bp']
+           'security_bp', 'public_bp', 'admin_bp', 'gold_bp']
