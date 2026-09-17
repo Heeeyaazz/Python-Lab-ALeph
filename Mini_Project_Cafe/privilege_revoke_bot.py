@@ -49,7 +49,7 @@ def cfg():
       'allow': allow,
       'graylog_host': os.environ.get('GRAYLOG_HOST', 'localhost'),
       'graylog_port': int(os.environ.get('GRAYLOG_PORT', '12201')),
-      'student': os.environ.get('STUDENT', 'lsy'),
+      'student': os.environ.get('STUDENT', 'shh'),
       'src_ip': os.environ.get('BOARD_SRC_IP', '127.0.0.1'),  # 신고에 남길 대표 IP
   }
 
